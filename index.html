@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Call | B2BUA Softphone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+      .loading-init {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #fff;
+      }
+
+      .spinner-wrap {
+        position: relative;
+        width: 96px;
+        height: 96px;
+      }
+
+      .spinner-ring {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        border-top-color: #18a058;
+        animation: spin 1s linear infinite;
+      }
+
+      .spinner-ring-2 {
+        inset: 8px;
+        border-top-color: rgba(24,160,88,0.2);
+        animation-duration: 1.6s;
+        animation-direction: reverse;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="loading-init">
+        <div class="spinner-wrap">
+          <div class="spinner-ring"></div>
+          <div class="spinner-ring spinner-ring-2"></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
